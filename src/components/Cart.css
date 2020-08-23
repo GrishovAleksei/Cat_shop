@@ -1,0 +1,140 @@
+.container {
+  position: relative;
+  cursor: pointer;
+  width: 320px;
+  height: 480px;
+  
+  clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 9.3%, 14% 0);
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 9.3%, 14% 0);
+  
+  background: #f2f2f2;
+  background-image: url('../img/Cat.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  border: 4px solid var(--border-color-default);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 0 10px 16px 10px;
+
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  width:45px;
+  height:80px;
+  
+  border: 4px solid var(--border-color-default);
+
+  transform: translate(-29px, -36.2px) rotate(45deg);
+  -webkit-transform: translate(-29px, -36.2px) rotate(45deg);
+  -moz-transform: translate(-29px, -36.2px) rotate(45deg);
+  -ms-transform: translate(-29px, -36.2px) rotate(45deg);
+  -o-transform: translate(-29px, -36.2px) rotate(45deg);
+}
+
+.container p {
+  margin: 0;
+}
+
+.container:hover, .link:hover {
+  --border-color-default:  #2ea8e6;
+}
+
+.container-active {
+  cursor: pointer;
+  --border-color-default: #d91667;
+}
+.container-active:hover{
+  --border-color-default:  #e62e7a;
+}
+
+.container .title::before {
+  content: "Сказочное заморское яство";
+}
+.container-active:hover:not(.first-mouse-leave) .title:before {
+  content: "Котэ не одобряет?";
+  color: #e52e7a;
+}
+
+.container-disabled {
+  cursor: not-allowed	;
+  --border-color-default: #b3b3b3;
+  background-image: linear-gradient(rgba(242, 242, 242, 0.5)0,rgba(242, 242, 242, 0.5) 100%), url('../img/Cat.png');
+}
+.container-disabled p{
+  color: #b3b3b3;
+}
+.container-disabled:hover{
+  --border-color-default:  #b3b3b3;
+}
+
+.cart-wrapper {
+  margin-top: 25px;
+  margin-left: 50px;
+  color: #666666;
+}
+
+.title {
+  font-size: 16px;
+}
+.text {
+  font-size: 14px;
+  line-height: 16px;
+}
+.name, .description {
+  color: black;
+  font-weight: bold;
+}
+.name {
+  font-size: 48px;
+}
+.description {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.circle-wrapper {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.circle-text {
+  width: 80px;
+  height: 80px;
+  clip-path: circle(50%);
+  background: var(--border-color-default);
+  text-align: center;
+  color: #ffffff;
+}
+.weight {
+  font-size: 42px;
+  line-height: 54px;
+}
+.measure {
+  font-size: 24px;
+  line-height: 12px;
+}
+
+.subtitle {
+  display: flex;
+  color: #ffffff;
+  font-size: 13px;
+  justify-content: center;
+  text-shadow: 0px 1px black;
+  margin-bottom: 15px;
+}
+.subtitle-disabled {
+  color: #ffff66;
+}
+.link {
+  cursor: pointer;
+  color: var(--border-color-default);
+  border-bottom: 1px dashed;
+}
